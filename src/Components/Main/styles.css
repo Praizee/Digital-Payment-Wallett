@@ -1,0 +1,5 @@
+/* linear gradient background for the balance section */
+.balance {
+    background: linear-gradient(135deg, #2488FF 0%, #000 100%);
+    box-shadow: 1px 2px 4px 0px #ECECEC;
+}
