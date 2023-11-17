@@ -5,7 +5,7 @@ import UserPic from "../../assets/Userpic.png";
 import { useAppContext } from "../../Context/AppContext";
 import { GoVerified } from "react-icons/go";
 
-const Navbar = ({ toggleSidebar }) => {
+const Navbar = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
   const { user } = useAppContext(); // Use the user state from the context
 
   return (
