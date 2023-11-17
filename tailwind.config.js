@@ -12,8 +12,7 @@ module.exports = withMT({
     extend: {},
 
     screens: {
-      'smaller': '350px',
-      // formerly 450
+      'smaller': '450px',
 
       'tablet': '640px',
       // => @media (min-width: 640px) { ... }
@@ -39,18 +38,12 @@ module.exports = withMT({
       normal: '400',
       medium: '500',
       semibold: '600',
-      notbold: '620',
-      almostbold: '650',
       bold: '700',
       extrabold: '800',
-      'extra-bold': '800',
       black: '900',
     }
   },
   plugins: [require("daisyui")],
-  daisyui: {
-    themes: ["light", "dark", "cupcake"],
-  },
 });
 
 // Made with 💙 by Stephen Adeniji
