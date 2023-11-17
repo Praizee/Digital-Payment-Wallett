@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import ScrollButton from '../Components/ScrollToTop/ScrollToTop';
 import Navbar from '../Components/Navbar/Navbar';
@@ -6,7 +6,7 @@ import { SidebarWithSearch } from '../Components/SideBarMenu/SideBarMenu';
 
 import { useAppContext } from '../Context/AppContext'; // Updated import to useAppContext
 import Footer from '../Components/Footer/Footer';
-import { Alert } from 'antd';
+
 
 const AuthenticatedLayout = () => {
   const [showSidebar, setShowSidebar] = useState(false);
