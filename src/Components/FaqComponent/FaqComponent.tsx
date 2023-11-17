@@ -1,4 +1,3 @@
-import React from 'react'
 import Faq from 'react-faq-component';
 
 
