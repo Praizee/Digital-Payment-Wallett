@@ -63,7 +63,7 @@ export function SidebarWithSearch({ showSidebar }) {
                 <NavLink to="dashboard"
                     className={({ isActive }) =>
                         isActive
-                            ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                            ? 'text-blue-500 bg-gray-200/50 font-medium rounded-lg'
                             : 'bg-transparent'
                     }>
                     {/* to="/" */}
@@ -102,7 +102,7 @@ export function SidebarWithSearch({ showSidebar }) {
                             <NavLink to="/profile"
                                 className={({ isActive }) =>
                                     isActive
-                                        ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                                        ? 'text-blue-500 bg-gray-200/50 font-medium rounded-lg'
                                         : 'bg-transparent'
                                 }>
                                 <ListItem className="py-2">
@@ -115,7 +115,7 @@ export function SidebarWithSearch({ showSidebar }) {
                             <NavLink to="pin-management"
                                 className={({ isActive }) =>
                                     isActive
-                                        ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                                        ? 'text-blue-500 bg-gray-200/50 font-medium rounded-lg'
                                         : 'bg-transparent'
                                 }>
                                 <ListItem className="py-2">
@@ -128,7 +128,7 @@ export function SidebarWithSearch({ showSidebar }) {
                             <NavLink to="change-password"
                                 className={({ isActive }) =>
                                     isActive
-                                        ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                                        ? 'text-blue-500 bg-gray-200/50 font-medium rounded-lg'
                                         : 'bg-transparent'
                                 }>
                                 <ListItem className="py-2">
@@ -145,7 +145,7 @@ export function SidebarWithSearch({ showSidebar }) {
                 <NavLink to="fund-wallet"
                     className={({ isActive }) =>
                         isActive
-                            ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                            ? 'text-blue-500 bg-gray-200/50 font-medium rounded-lg'
                             : 'bg-transparent'
                     }>
                     <ListItem className="py-2">
@@ -161,7 +161,7 @@ export function SidebarWithSearch({ showSidebar }) {
                 <NavLink to="topup"
                     className={({ isActive }) =>
                         isActive
-                            ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                            ? 'text-blue-500 bg-gray-200/50 font-medium rounded-lg'
                             : 'bg-transparent'
                     }>
                     <ListItem className="py-2">
@@ -198,7 +198,7 @@ export function SidebarWithSearch({ showSidebar }) {
                             <NavLink to="electricity-payment"
                                 className={({ isActive }) =>
                                     isActive
-                                        ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                                        ? 'text-blue-500 bg-gray-200/50 font-medium rounded-lg'
                                         : 'bg-transparent'
                                 }>
                                 <ListItem className="py-2">
@@ -211,7 +211,7 @@ export function SidebarWithSearch({ showSidebar }) {
                             <NavLink to="cable-subscription"
                                 className={({ isActive }) =>
                                     isActive
-                                        ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                                        ? 'text-blue-500 bg-gray-200/50 font-medium rounded-lg'
                                         : 'bg-transparent'
                                 }>
                                 <ListItem className="py-2">
@@ -228,7 +228,7 @@ export function SidebarWithSearch({ showSidebar }) {
                 <NavLink to="transfer"
                     className={({ isActive }) =>
                         isActive
-                            ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                            ? 'text-blue-500 bg-gray-200/50 font-medium rounded-lg'
                             : 'bg-transparent'
                     }>
                     <ListItem className="py-2">
@@ -242,7 +242,7 @@ export function SidebarWithSearch({ showSidebar }) {
                 <NavLink to="transaction-history"
                     className={({ isActive }) =>
                         isActive
-                            ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                            ? 'text-blue-500 bg-gray-200/50 font-medium rounded-lg'
                             : 'bg-transparent'
                     }>
                     <ListItem className="py-2">
@@ -259,7 +259,7 @@ export function SidebarWithSearch({ showSidebar }) {
                 <NavLink to="support"
                     className={({ isActive }) =>
                         isActive
-                            ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                            ? 'text-blue-500 bg-gray-200/50 font-medium rounded-lg'
                             : 'bg-transparent'
                     }>
                     <ListItem className="py-2">
@@ -273,7 +273,7 @@ export function SidebarWithSearch({ showSidebar }) {
                 <NavLink to="faqs"
                     className={({ isActive }) =>
                         isActive
-                            ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                            ? 'text-blue-500 bg-gray-200/50 font-medium rounded-lg'
                             : 'bg-transparent'
                     }>
                     <ListItem className="py-2">
@@ -288,7 +288,7 @@ export function SidebarWithSearch({ showSidebar }) {
                 <NavLink to="settings"
                     className={({ isActive }) =>
                         isActive
-                            ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                            ? 'text-blue-500 bg-gray-200/50 font-medium rounded-lg'
                             : 'bg-transparent'
                     }>
                     <ListItem className="py-2">
