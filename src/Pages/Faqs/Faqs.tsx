@@ -1,4 +1,3 @@
-import React from 'react'
 import FaqComponent from '../../Components/FaqComponent/FaqComponent'
 
 const Faqs = () => {

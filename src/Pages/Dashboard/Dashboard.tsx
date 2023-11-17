@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from '../../Firebase/firebase.js';
 
 import { motion } from "framer-motion";
 import AvailableBalance from "../../Components/Main/AvailableBalance";
-import HeaderGraph from "../../Components/Main/HeaderGraph";
+// import HeaderGraph from "../../Components/Main/HeaderGraph";
 import Statistics from "../../Components/Main/Statistics";
 import { CustomerTable } from "../../Components/Main/CustomerTable";
 

@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { getAuth, sendPasswordResetEmail } from "firebase/auth";
+import { sendPasswordResetEmail } from "firebase/auth";
 import { auth } from '../../Firebase/firebase.js'; // Import Firebase authentication
 import { Spinner } from "@material-tailwind/react"; // Import the Spinner component
 

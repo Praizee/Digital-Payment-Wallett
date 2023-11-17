@@ -1,4 +1,3 @@
-import React from 'react'
 import { CustomerTable } from '../../Components/Main/CustomerTable'
 
 const TransactionHistory = () => {
