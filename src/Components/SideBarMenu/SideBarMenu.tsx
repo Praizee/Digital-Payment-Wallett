@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from '../../Firebase/firebase.ts';
 
@@ -14,13 +14,12 @@ import {
 import { TbHeadphones } from "react-icons/tb";
 import { BsQuestionOctagon } from "react-icons/bs";
 import { LiaMoneyBillAltSolid, LiaMoneyBillSolid } from "react-icons/lia";
-import { LuLogOut, LuPhone } from "react-icons/lu";
+import { LuLogOut } from "react-icons/lu";
 import { IoSettingsOutline, IoWifiOutline, IoBulbOutline } from "react-icons/io5";
 import { RxAvatar } from "react-icons/rx";
 import { RiLayout6Line } from "react-icons/ri";
 import { GoMegaphone } from "react-icons/go";
 import { GrTransaction } from "react-icons/gr";
-import { FaCircleUser } from "react-icons/fa6";
 
 
 
@@ -48,17 +47,25 @@ export function SidebarWithSearch({ showSidebar }) {
 
     return (
         // <Card className="h-[calc(100vh-2rem)] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5">
+
+        // Recent ** ('pushes' content to the right )
+        // <Card
+        //     className={`${showSidebar ? "block" : "hidden"
+        //         } rounded-none border-none w-full max-w-[18rem] left-0 bg-transparent px-1 pt-[rem]`}
+        // >
+
         <Card
-            className={`${showSidebar ? "block" : "hidden"
-                } rounded-none border-none w-full max-w-[18rem] left-0 bg-transparent px-1 pt-[rem]`}
+            className={`${showSidebar ? "fixed laptop:relative top-0 laptop:top-auto pt-24 laptop:pt-0 bottom-0 left-0 h-full z-50 bg-white overflow-y-auto" : "hidden"
+                } rounded-none border-none w-full max-w-[18rem] px-1 pt-[rem]`}
         >
-
             <List>
-                {/* <div className=" mx-auto py-2">
-                    <FaCircleUser size={60} />
-                </div> */}
 
-                <Link to="dashboard">
+                <NavLink to="dashboard"
+                    className={({ isActive }) =>
+                        isActive
+                            ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                            : 'bg-transparent'
+                    }>
                     {/* to="/" */}
                     <ListItem className="py-2">
                         <ListItemPrefix>
@@ -68,7 +75,7 @@ export function SidebarWithSearch({ showSidebar }) {
                             Dashboard
                         </p>
                     </ListItem>
-                </Link>
+                </NavLink>
 
                 <Accordion
                     open={open === 1}
@@ -92,35 +99,55 @@ export function SidebarWithSearch({ showSidebar }) {
                     </ListItem>
                     <AccordionBody className="py-1">
                         <List className="p-0">
-                            <Link to="/profile">
+                            <NavLink to="/profile"
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                                        : 'bg-transparent'
+                                }>
                                 <ListItem className="py-2">
                                     <ListItemPrefix>
                                         <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                                     </ListItemPrefix>
                                     Profile
                                 </ListItem>
-                            </Link>
-                            <Link to="pin-management">
+                            </NavLink>
+                            <NavLink to="pin-management"
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                                        : 'bg-transparent'
+                                }>
                                 <ListItem className="py-2">
                                     <ListItemPrefix>
                                         <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                                     </ListItemPrefix>
                                     Pin Management
                                 </ListItem>
-                            </Link>
-                            <Link to="change-password">
+                            </NavLink>
+                            <NavLink to="change-password"
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                                        : 'bg-transparent'
+                                }>
                                 <ListItem className="py-2">
                                     <ListItemPrefix>
                                         <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                                     </ListItemPrefix>
                                     Change Password
                                 </ListItem>
-                            </Link>
+                            </NavLink>
                         </List>
                     </AccordionBody>
                 </Accordion>
 
-                <Link to="fund-wallet">
+                <NavLink to="fund-wallet"
+                    className={({ isActive }) =>
+                        isActive
+                            ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                            : 'bg-transparent'
+                    }>
                     <ListItem className="py-2">
                         <ListItemPrefix>
                             <LiaMoneyBillAltSolid className="h-5 w-5" />
@@ -129,9 +156,14 @@ export function SidebarWithSearch({ showSidebar }) {
                             Fund Wallet
                         </p>
                     </ListItem>
-                </Link>
+                </NavLink>
 
-                <Link to="topup">
+                <NavLink to="topup"
+                    className={({ isActive }) =>
+                        isActive
+                            ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                            : 'bg-transparent'
+                    }>
                     <ListItem className="py-2">
                         <ListItemPrefix>
                             <IoWifiOutline className="h-5 w-5" />
@@ -140,7 +172,7 @@ export function SidebarWithSearch({ showSidebar }) {
                             Buy Data/Airtime
                         </p>
                     </ListItem>
-                </Link>
+                </NavLink>
 
                 <Accordion
                     open={open === 2}
@@ -163,36 +195,56 @@ export function SidebarWithSearch({ showSidebar }) {
                     </ListItem>
                     <AccordionBody className="py-1">
                         <List className="p-0">
-                            <Link to="electricity-payment">
+                            <NavLink to="electricity-payment"
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                                        : 'bg-transparent'
+                                }>
                                 <ListItem className="py-2">
                                     <ListItemPrefix>
                                         <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                                     </ListItemPrefix>
                                     Electricity Payments
                                 </ListItem>
-                            </Link>
-                            <Link to="cable-subscription">
+                            </NavLink>
+                            <NavLink to="cable-subscription"
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                                        : 'bg-transparent'
+                                }>
                                 <ListItem className="py-2">
                                     <ListItemPrefix>
                                         <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                                     </ListItemPrefix>
                                     Cable Subscription
                                 </ListItem>
-                            </Link>
+                            </NavLink>
                         </List>
                     </AccordionBody>
                 </Accordion>
 
-                <Link to="transfer">
+                <NavLink to="transfer"
+                    className={({ isActive }) =>
+                        isActive
+                            ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                            : 'bg-transparent'
+                    }>
                     <ListItem className="py-2">
                         <ListItemPrefix>
                             <LiaMoneyBillSolid className="h-5 w-5" />
                         </ListItemPrefix>
                         Transfer Funds
                     </ListItem>
-                </Link>
+                </NavLink>
 
-                <Link to="transaction-history">
+                <NavLink to="transaction-history"
+                    className={({ isActive }) =>
+                        isActive
+                            ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                            : 'bg-transparent'
+                    }>
                     <ListItem className="py-2">
                         <ListItemPrefix>
                             {/* <GiReceiveMoney className="h-5 w-5" /> */}
@@ -200,20 +252,30 @@ export function SidebarWithSearch({ showSidebar }) {
                         </ListItemPrefix>
                         Transaction History
                     </ListItem>
-                </Link>
+                </NavLink>
 
                 <hr className="my-1 border-blue-gray-50" />
 
-                <Link to="support">
+                <NavLink to="support"
+                    className={({ isActive }) =>
+                        isActive
+                            ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                            : 'bg-transparent'
+                    }>
                     <ListItem className="py-2">
                         <ListItemPrefix>
                             <TbHeadphones className="h-5 w-5" />
                         </ListItemPrefix>
                         Support
                     </ListItem>
-                </Link>
+                </NavLink>
 
-                <Link to="faqs">
+                <NavLink to="faqs"
+                    className={({ isActive }) =>
+                        isActive
+                            ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                            : 'bg-transparent'
+                    }>
                     <ListItem className="py-2">
                         <ListItemPrefix>
                             <BsQuestionOctagon className="h-5 w-5" />
@@ -222,8 +284,13 @@ export function SidebarWithSearch({ showSidebar }) {
                             FAQs
                         </p>
                     </ListItem>
-                </Link>
-                <Link to="settings">
+                </NavLink>
+                <NavLink to="settings"
+                    className={({ isActive }) =>
+                        isActive
+                            ? 'bg-[#F7EDFC] text-blue-500 font-bold rounded-lg'
+                            : 'bg-transparent'
+                    }>
                     <ListItem className="py-2">
                         <ListItemPrefix>
                             {/* <Cog6ToothIcon className="h-5 w-5" /> */}
@@ -231,8 +298,8 @@ export function SidebarWithSearch({ showSidebar }) {
                         </ListItemPrefix>
                         Settings
                     </ListItem>
-                </Link>
-                <Link to="">
+                </NavLink>
+                <NavLink to="">
                     <ListItem className="py-2" onClick={handleLogout}>
                         <ListItemPrefix>
                             {/* <PowerIcon className="h-5 w-5" /> */}
@@ -240,15 +307,15 @@ export function SidebarWithSearch({ showSidebar }) {
                         </ListItemPrefix>
                         Log Out
                     </ListItem>
-                </Link>
+                </NavLink>
             </List>
 
             <Alert open={openAlert} className="mt-8 bg-blue-gray-900" onClose={() => setOpenAlert(false)}>
                 <GoMegaphone className="mb-4 h-12 w-12" />
-                <h6 variant="h6" className="font-semibold mb-1">
+                <h6 className="font-semibold mb-1">
                     Announcement
                 </h6>
-                <p variant="small" className="font-normal text-sm opacity-80">
+                <p className="font-normal text-sm opacity-80">
                     You can now make payments for Phone Airtime Recharge and Internet Data bundle
                     subscription (MTN, Airtel, 9Mobile, Glo); Cable TV subscription
                     such as DTSV, GOTV, Startimes; as well as Electricity bills.
@@ -259,10 +326,10 @@ export function SidebarWithSearch({ showSidebar }) {
                     >
                         Dismiss
                     </a>
-                    <Link to="topup" onClick={() => setOpenAlert(false)}
+                    <NavLink to="topup" onClick={() => setOpenAlert(false)}
                         className="text-sm cursor-pointer font-medium text-success">
                         Try Now
-                    </Link>
+                    </NavLink>
                 </div>
             </Alert>
         </Card>
