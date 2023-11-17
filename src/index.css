@@ -10,6 +10,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* bouncing loader animation */
+
+@layer utilities {
+    .animation-delay-200 {
+        animation-delay: 0.2s;
+    }
+
+    .animation-delay-400 {
+        animation-delay: 0.4s;
+    }
+}
+
+.circle {
+    @apply w-4 h-4 my-12 mx-1 bg-blue-500 rounded-full;
+}
+
+/* end of bouncing loader animation */
+
 * {
     font-family: 'Inter', sans-serif;
     font-size: 16px;

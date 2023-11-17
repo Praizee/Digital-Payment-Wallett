@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../Firebase/firebase.js';
@@ -25,8 +25,14 @@ const AuthRoute = ({ children }) => {
     }, [navigate]);
 
     if (loading) {
-        // Display a loading indicator
-        return <div>Loading...</div>;
+        // Display a 'bouncing loader' loading indicator
+        return (
+            <div className="flex justify-center items-center h-screen">
+                <span className="circle animate-loader"></span>
+                <span className="circle animate-loader animation-delay-200"></span>
+                <span className="circle animate-loader animation-delay-400"></span>
+            </div>
+        );
     }
 
     // When the loading is complete, render the child components
