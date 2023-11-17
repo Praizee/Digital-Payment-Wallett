@@ -8,7 +8,7 @@ const AvailableBalance = () => {
 
     // Create an object to store bank-account number pairs
     const bankAccountNumbers = {
-        "Sterling Bank Ltd": "9876543310",
+        "Sterling Bank Ltd": "9876544310",
         "UBA Bank PLC": "8452099123",
         "Wema Bank PLC": "1234567890", // Replace with actual account numbers
         "Zenith Bank PLC": "9876543210",
