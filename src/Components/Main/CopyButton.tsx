@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import Notification from "../Notifications/TextCopyNotification";
 

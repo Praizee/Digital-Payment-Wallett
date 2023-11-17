@@ -1,4 +1,3 @@
-import React from 'react';
 
 const GreetingMessage = () => {
     // Get the current date and time

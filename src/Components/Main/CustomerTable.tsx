@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { FcPrint } from "react-icons/fc";
 import { CustomerTableData } from './content';
 
