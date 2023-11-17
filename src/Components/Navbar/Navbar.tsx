@@ -1,4 +1,3 @@
-import React from "react";
 import { FiMenu } from "react-icons/fi";
 import { LuBell, LuScanLine, LuSun, LuMoon } from "react-icons/lu";
 import { IoChatboxEllipsesOutline } from "react-icons/io5";
@@ -14,13 +13,13 @@ const Navbar = ({ toggleSidebar }) => {
       <div className="flex-1 laptop:mx-[rem] mx-">
         <div className="flex-none">
           {/* Button to toggle the sidebar */}
-          <button className="btn btn-square btn-ghost" onClick={toggleSidebar}>
+          <button className="btn btn-square btn-ghost flex laptop:hidden" onClick={toggleSidebar}>
             <FiMenu size={25} /> {/* Hamburger menu icon */}
           </button>
         </div>
         <div className="flex-1 mx-4 w-1/2">
           <a className="leading-[1.5rem] text-black font-black text-[1.5rem]">
-            Logo {/* Company logo */}
+            LOGO {/* Company logo */}
           </a>
         </div>
       </div>
