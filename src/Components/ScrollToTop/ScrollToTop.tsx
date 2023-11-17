@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaArrowCircleUp } from 'react-icons/fa';
 import { Button } from './ScrollButton.js';
 
