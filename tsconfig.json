@@ -15,11 +15,11 @@
     "skipLibCheck": true,
     /* Bundler mode */
     "moduleResolution": "Node",
-    "allowImportingTsExtensions": true,
+    "allowImportingTsExtensions": false, //set this to true when noEmit is true
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
+    "noEmit": false, // Set to true during development to check for type errors without generating JavaScript files.
     "jsx": "react-jsx",
     /* Linting */
     "strict": true,
