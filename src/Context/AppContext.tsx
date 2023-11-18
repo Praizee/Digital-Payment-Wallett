@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { getDatabase, ref, get } from 'firebase/database';
-import { auth } from '../Firebase/firebase.ts';
+import { auth } from '../Firebase/firebase';
 
 // Define the initial state structure
 type UserState = {
