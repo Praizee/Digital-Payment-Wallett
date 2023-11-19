@@ -1,0 +1,121 @@
+2:30:26 PM: src/Components/Alerts/Alerts.tsx(3,19): error TS7031: Binding element "errorMessages" implicitly has an "any" type.
+
+2:30:26 PM: src/Components/Alerts/Alerts.tsx(3,34): error TS7031: Binding element "successMessages" implicitly has an "any" type.
+
+2:30:26 PM: src/Components/Alerts/Alerts.tsx(26,23): error TS2345: Argument of type "Element[]" is not assignable to parameter of type "SetStateAction<never[]>".
+
+2:30:26 PM:   Type "Element[]" is not assignable to type "never[]".
+
+2:30:26 PM:     Type "Element" is not assignable to type "never".
+
+2:30:26 PM: src/Components/CreditCard/CreditCard.tsx(6,13): error TS2339: Property "user" does not exist on type "UserState | null".
+
+2:30:26 PM: src/Components/Main/AvailableBalance.tsx(18,31): error TS7006: Parameter "e" implicitly has an "any" type.
+
+2:30:26 PM: src/Components/Main/AvailableBalance.tsx(69,34): error TS7053: Element implicitly has an "any" type because expression of type "string" can"t be used to index type "{ "Sterling Bank Ltd": string; "UBA Bank PLC": string; "Wema Bank PLC": string; "Zenith Bank PLC": string; }".
+  No index signature with a parameter of type "string" was found on type "{ "Sterling Bank Ltd": string; "UBA Bank PLC": string; "Wema Bank PLC": string; "Zenith Bank PLC": string; }".
+
+2:30:26 PM: src/Components/Main/Balance.tsx(4,20): error TS7031: Binding element "initialBalance" implicitly has an "any" type.
+
+2:30:26 PM: src/Components/Main/CopyButton.tsx(5,23): error TS7031: Binding element "selectedBank" implicitly has an "any" type.
+
+2:30:26 PM: src/Components/Main/CopyButton.tsx(8,30): error TS7006: Parameter "e" implicitly has an "any" type.
+
+2:30:26 PM: src/Components/Main/CopyButton.tsx(20,31): error TS7053: Element implicitly has an "any" type because expression of type "any" can"t be used to index type "{ "Sterling Bank Ltd": string; "UBA Bank PLC": string; "Wema Bank PLC": string; "Zenith Bank PLC": string; }".
+src/Components/Main/CustomerTable.tsx(17,31): error TS7006: Parameter "newPage" implicitly has an "any" type.
+
+2:30:26 PM: src/Components/Main/HeaderGraph.tsx(16,35): error TS7006: Parameter "interval" implicitly has an "any" type.
+
+2:30:26 PM: src/Components/Main/HeaderGraph.tsx(28,34): error TS7053: Element implicitly has an "any" type because expression of type "string" can"t be used to index type "{ Daily: { graph: string; balance: string; day: string; }; Weekly: { graph: string; balance: string; day: string; }; Monthly: { graph: string; balance: string; day: string; }; }".
+  No index signature with a parameter of type "string" was found on type "{ Daily: { graph: string; balance: string; day: string; }; Weekly: { graph: string; balance: string; day: string; }; Monthly: { graph: string; balance: string; day: string; }; }".
+2:30:26 PM: src/Components/Main/HeaderGraph.tsx(34,34): error TS7053: Element implicitly has an "any" type because expression of type "string" can"t be used to index type "{ Daily: { graph: string; balance: string; day: string; }; Weekly: { graph: string; balance: string; day: string; }; Monthly: { graph: string; balance: string; day: string; }; }".
+  No index signature with a parameter of type "string" was found on type "{ Daily: { graph: string; balance: string; day: string; }; Weekly: { graph: string; balance: string; day: string; }; Monthly: { graph: string; balance: string; day: string; }; }".
+2:30:26 PM: src/Components/Main/HeaderGraph.tsx(92,38): error TS7053: Element implicitly has an "any" type because expression of type "string" can"t be used to index type "{ Daily: { graph: string; balance: string; day: string; }; Weekly: { graph: string; balance: string; day: string; }; Monthly: { graph: string; balance: string; day: string; }; }".
+  No index signature with a parameter of type "string" was found on type "{ Daily: { graph: string; balance: string; day: string; }; Weekly: { graph: string; balance: string; day: string; }; Monthly: { graph: string; balance: string; day: string; }; }".
+2:30:26 PM: src/Components/Navbar/Navbar.tsx(9,11): error TS2339: Property "user" does not exist on type "UserState | null".
+
+2:30:26 PM: src/Components/Notifications/TextCopyNotification.tsx(4,25): error TS7031: Binding element "message" implicitly has an "any" type.
+
+2:30:26 PM: src/Components/Notifications/TextCopyNotification.tsx(4,34): error TS7031: Binding element "onClose" implicitly has an "any" type.
+
+- 2:30:26 PM: src/Components/SideBarMenu/SideBarMenu.tsx(4,22): error TS5097: An import path can only end with a ".ts" extension when "allowImportingTsExtensions" is enabled.
+
+2:30:26 PM: src/Components/SideBarMenu/SideBarMenu.tsx(26,37): error TS7031: Binding element "showSidebar" implicitly has an "any" type.
+
+2:30:26 PM: src/Components/SideBarMenu/SideBarMenu.tsx(34,19): error TS6133: "error" is declared but its value is never read.
+
+2:30:26 PM: src/Components/SideBarMenu/SideBarMenu.tsx(43,25): error TS7006: Parameter "value" implicitly has an "any" type.
+
+2:30:26 PM: src/Components/Transitions/Transitions.tsx(9,24): error TS7031: Binding element "children" implicitly has an "any" type.
+
+- 2:30:26 PM: src/Context/AppContext.tsx(4,22): error TS5097: An import path can only end with a ".ts" extension when "allowImportingTsExtensions" is enabled.
+
+2:30:26 PM: src/Context/AppContext.tsx(81,46): error TS2322: Type "{ user: UserState | null; setUser: React.Dispatch<React.SetStateAction<UserState | null>>; loading: boolean; }" is not assignable to type "UserState".
+
+2:30:26 PM:   Object literal may only specify known properties, and "user" does not exist in type "UserState".
+
+2:30:26 PM: src/Layouts/AuthenticatedLayout.tsx(14,11): error TS2339: Property "user" does not exist on type "UserState | null".
+
+2:30:26 PM: src/Layouts/AuthenticatedLayout.tsx(14,17): error TS2339: Property "loading" does not exist on type "UserState | null".
+
+2:30:26 PM: src/Pages/Dashboard/Dashboard.tsx(23,11): error TS2339: Property "user" does not exist on type "UserState | null".
+
+2:30:26 PM: src/Pages/Dashboard/Dashboard.tsx(31,15): error TS6133: "uid" is declared but its value is never read.
+
+2:30:26 PM: src/Pages/Login/Login.tsx(27,20): error TS7006: Parameter "e" implicitly has an "any" type.
+
+2:30:26 PM: src/Pages/Login/Login.tsx(33,25): error TS2322: Type "string" is not assignable to type "never".
+
+2:30:26 PM: src/Pages/Login/Login.tsx(61,27): error TS2322: Type "string" is not assignable to type "never".
+
+2:30:26 PM: src/Pages/Login/Login.tsx(254,20): error TS2741: Property "successMessages" is missing in type "{ errorMessages: never[]; }" but required in type "{ errorMessages: any; successMessages: any; }".
+
+2:30:26 PM: src/Pages/Profile/Profile.tsx(6,13): error TS2339: Property "user" does not exist on type "UserState | null".
+
+2:30:26 PM: src/Pages/Profile/Profile.tsx(6,19): error TS2339: Property "setUser" does not exist on type "UserState | null".
+
+2:30:26 PM: src/Pages/Profile/Profile.tsx(6,19): error TS6133: "setUser" is declared but its value is never read.
+
+2:30:26 PM: src/Pages/Settings/Settings.tsx(11,13): error TS2339: Property "user" does not exist on type "UserState | null".
+
+2:30:26 PM: src/Pages/Settings/Settings.tsx(13,21): error TS6133: "setLoading" is declared but its value is never read.
+
+2:30:26 PM: src/Pages/Settings/Settings.tsx(22,27): error TS7006: Parameter "e" implicitly has an "any" type.
+
+2:30:26 PM: src/Pages/Settings/Settings.tsx(30,33): error TS7006: Parameter "e" implicitly has an "any" type.
+
+2:30:26 PM: src/Pages/Settings/Settings.tsx(35,47): error TS6133: "key" is declared but its value is never read.
+
+2:30:26 PM: src/Pages/Settings/Settings.tsx(54,31): error TS2345: Argument of type ""User data updated successfully!"" is not assignable to parameter of type "SetStateAction<null>".
+
+2:30:26 PM: src/Pages/Settings/Settings.tsx(67,20): error TS2339: Property "error" does not exist on type "({ errorMessages, successMessages }: { errorMessages: any; successMessages: any; }) => Element".
+
+2:30:26 PM: src/Pages/SignUp/SignUp.tsx(4,16): error TS6133: "db" is declared but its value is never read.
+
+2:30:26 PM: src/Pages/SignUp/SignUp.tsx(21,11): error TS2339: Property "user" does not exist on type "UserState | null".
+
+2:30:26 PM: src/Pages/SignUp/SignUp.tsx(21,17): error TS2339: Property "setUser" does not exist on type "UserState | null".
+
+2:30:26 PM: src/Pages/SignUp/SignUp.tsx(27,25): error TS7006: Parameter "e" implicitly has an "any" type.
+
+2:30:26 PM: src/Pages/SignUp/SignUp.tsx(29,14): error TS7006: Parameter "prevUser" implicitly has an "any" type.
+
+2:30:26 PM: src/Pages/SignUp/SignUp.tsx(35,9): error TS6133: "initialUserState" is declared but its value is never read.
+
+2:30:26 PM: src/Pages/SignUp/SignUp.tsx(42,27): error TS7006: Parameter "e" implicitly has an "any" type.
+
+2:30:26 PM: src/Pages/SignUp/SignUp.tsx(52,25): error TS2322: Type "string" is not assignable to type "never".
+
+2:30:26 PM: src/Pages/SignUp/SignUp.tsx(59,25): error TS2322: Type "string" is not assignable to type "never".
+
+2:30:26 PM: src/Pages/SignUp/SignUp.tsx(67,9): error TS2322: Type "string" is not assignable to type "never".
+
+2:30:26 PM: src/Pages/SignUp/SignUp.tsx(95,27): error TS2322: Type "string" is not assignable to type "never".
+
+2:30:26 PM: src/Pages/SignUp/SignUp.tsx(104,25): error TS18046: "error" is of type "unknown".
+
+2:30:26 PM: src/Pages/SignUp/SignUp.tsx(104,25): error TS2322: Type "any" is not assignable to type "never".
+
+2:30:26 PM: src/Routes/AuthRoute.tsx(6,22): error TS7031: Binding element "children" implicitly has an "any" type.
+
+- 2:30:26 PM: src/main.tsx(3,17): error TS5097: An import path can only end with a ".tsx" extension when "allowImportingTsExtensions" is enabled.
