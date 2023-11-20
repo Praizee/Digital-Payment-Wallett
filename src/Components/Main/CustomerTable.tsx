@@ -14,7 +14,7 @@ export const CustomerTable = () => {
 
     const totalPages = Math.ceil(CustomerTableData.length / itemsPerPage);
 
-    const handlePageChange = (newPage) => {
+    const handlePageChange = (newPage: number) => {
         if (newPage >= 1 && newPage <= totalPages) {
             setCurrentPage(newPage);
         }
