@@ -56,7 +56,9 @@ const Navbar = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
             </span>
             <span>
               <h2 className="text-[#2E2E3A] text-[0.875rem] font-semibold">
-                {user.firstName} {user.lastName} {/* User's first and last name */}
+                {/* {user.firstName} {user.lastName}  */}
+                {/* User's first and last name */}
+                {user && user.firstName ? user.firstName : 'User'} {user && user.lastName ? user.lastName : 'name'}
               </h2>
               <p className="text-[#9A9AAF] text-[0.75rem] font-light flex gap-2">Verified user <GoVerified title="Verified User" className="text-green-500" /></p>
               {/* User verification status */}
