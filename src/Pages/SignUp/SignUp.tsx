@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import SignUpImg from "../../assets/young-afro-man-listening-music-with-headphones_58466-16300.webp"
 import { Spinner } from "@material-tailwind/react"; // Import the Spinner component
-import Alerts from "../../Components/Alerts/Alerts.jsx";
+import Alerts from "../../Components/Alerts/Alerts";
 
 const animationConfiguration = {
   initial: { opacity: 0 },

@@ -4,7 +4,7 @@ import { useAppContext } from '../../Context/AppContext';
 import { getDatabase, ref, set } from 'firebase/database';
 
 import { Spinner } from "@material-tailwind/react";
-import Alerts from "../../Components/Alerts/Alerts.jsx";
+import Alerts from "../../Components/Alerts/Alerts";
 
 
 const Settings = () => {
