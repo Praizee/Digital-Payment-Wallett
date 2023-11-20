@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../../Firebase/firebase';
+import { auth } from '../../Firebase/firebase.js';
 
 import { motion } from "framer-motion";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import LoginImg from "../../assets/login.jpeg";
 import { Spinner } from "@material-tailwind/react"; // Import the Spinner component
-import Alerts from "../../Components/Alerts/Alerts";
+import Alerts from "../../Components/Alerts/Alerts.jsx";
 
 const animationConfiguration = {
   initial: { opacity: 0 },
