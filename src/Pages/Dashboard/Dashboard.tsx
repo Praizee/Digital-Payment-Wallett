@@ -28,7 +28,7 @@ const Dashboard = () => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         // User is signed in
-        const uid = user.uid;
+        // const uid = user.uid;
         // console.log("uid", uid)
         console.log("user is logged in");
       } else {
