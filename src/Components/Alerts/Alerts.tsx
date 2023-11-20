@@ -1,7 +1,12 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, ReactElement } from "react";
 
-const Alerts = ({ errorMessages, successMessages }) => {
-    const [alerts, setAlerts] = useState([]);
+interface AlertsProps {
+    errorMessages: string[];
+    successMessages: string[];
+}
+
+const Alerts: React.FC<AlertsProps> = ({ errorMessages, successMessages }) => {
+    const [alerts, setAlerts] = useState<ReactElement[]>([]);
 
     useEffect(() => {
         // Ensure that both errorMessages and successMessages are arrays

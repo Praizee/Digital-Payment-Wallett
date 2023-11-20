@@ -15,7 +15,7 @@ const AvailableBalance = () => {
     };
 
     // Function to handle changes in the selected bank
-    const handleBankChange = (e) => {
+    const handleBankChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedBank(e.target.value);
     };
 
@@ -66,7 +66,7 @@ const AvailableBalance = () => {
                         {/* text to be copied */}
                         <span className="flex space-x-4 py-2">
                             <p className="text-[0.75rem] font-semibold">
-                                {bankAccountNumbers[selectedBank]}
+                                {bankAccountNumbers[selectedBank as keyof typeof bankAccountNumbers]}
                             </p>
                             <p className="text-[0.75rem]">
                                 — &nbsp; {selectedBank}

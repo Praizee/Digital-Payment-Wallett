@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 
-const Balance = ({ initialBalance }) => {
+const Balance = ({ initialBalance }: { initialBalance: number }) => {
     const [isBalanceVisible, setIsBalanceVisible] = useState(false);
 
     const toggleBalanceVisibility = () => {

@@ -2,10 +2,10 @@ import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import Notification from "../Notifications/TextCopyNotification";
 
-const CopyButton = ({ selectedBank }) => {
+const CopyButton = ({ selectedBank }: { selectedBank: string }) => {
     const [showNotification, setShowNotification] = useState(false);
 
-    const handleCopyClick = (e) => {
+    const handleCopyClick = (e: React.MouseEvent) => {
         e.preventDefault(); // Prevent the default behavior
 
         // Define bankAccountNumbers object here with account numbers for each bank
@@ -17,7 +17,7 @@ const CopyButton = ({ selectedBank }) => {
         };
 
         // Get the account number based on the selected bank
-        const accountNumber = bankAccountNumbers[selectedBank];
+        const accountNumber = bankAccountNumbers[selectedBank as keyof typeof bankAccountNumbers];
 
         const textToCopy = `${accountNumber} — ${selectedBank}`;
 
