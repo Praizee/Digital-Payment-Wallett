@@ -1,7 +1,12 @@
 import { useEffect, useState } from 'react';
-import { BsFillCheckCircleFill } from "react-icons/bs";
+import { BsFillCheckCircleFill } from 'react-icons/bs';
 
-const Notification = ({ message, onClose }) => {
+interface NotificationProps {
+    message: string;
+    onClose: () => void;
+}
+
+const Notification: React.FC<NotificationProps> = ({ message, onClose }) => {
     const [visible, setVisible] = useState(true);
 
     useEffect(() => {
@@ -16,15 +21,12 @@ const Notification = ({ message, onClose }) => {
     return (
         <div
             className={`fixed flex bottom-0 z-[100] left-0 right-0 mx-auto space-x-4 p-4 bg-success text-white rounded-md transition-opacity 
-            ${visible ? 'opacity-100' : 'opacity-0 pointer-events-none'
-                }`}
+            ${visible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
         >
             <span className=''>
                 <BsFillCheckCircleFill size={20} />
             </span>
-            <p className=' font-semibold'>
-                {message}
-            </p>
+            <p className=' font-semibold'>{message}</p>
         </div>
     );
 };

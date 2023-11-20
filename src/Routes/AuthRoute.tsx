@@ -1,9 +1,13 @@
-import { useEffect, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../Firebase/firebase';
 
-const AuthRoute = ({ children }) => {
+interface AuthRouteProps {
+    children: ReactNode;
+}
+
+const AuthRoute = ({ children }: AuthRouteProps) => {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(true);
 
@@ -36,7 +40,7 @@ const AuthRoute = ({ children }) => {
     }
 
     // When the loading is complete, render the child components
-    return children;
+    return <>{children}</>;
 };
 
 export default AuthRoute;

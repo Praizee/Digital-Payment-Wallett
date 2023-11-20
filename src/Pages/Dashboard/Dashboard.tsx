@@ -4,7 +4,7 @@ import { auth } from '../../Firebase/firebase.js';
 
 import { motion } from "framer-motion";
 import AvailableBalance from "../../Components/Main/AvailableBalance";
-// import HeaderGraph from "../../Components/Main/HeaderGraph";
+import HeaderGraph from "../../Components/Main/HeaderGraph";
 import Statistics from "../../Components/Main/Statistics";
 import { CustomerTable } from "../../Components/Main/CustomerTable";
 
@@ -71,7 +71,7 @@ const Dashboard = () => {
               </div>
 
               <div className=''>
-                {/* <HeaderGraph /> */}
+                <HeaderGraph />
               </div>
 
               <div className="laptop:hidden overflow-x-auto max-w-[20.5rem] min-w-[19.5rem] tablet:max-w-[35.5rem]">

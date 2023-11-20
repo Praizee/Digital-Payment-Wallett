@@ -10,8 +10,10 @@ import Alerts from "../../Components/Alerts/Alerts";
 const Settings = () => {
     const { user } = useAppContext();
     const navigate = useNavigate();
-    const [loading, setLoading] = useState(false);
-    const [successMessage, setSuccessMessage] = useState(null);
+    const [loading] = useState(false);
+    const [successMessage, setSuccessMessage] = useState<string | null>(null);
+    const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
     const [formData, setFormData] = useState({
         bankName: user?.bankName || '', // Initialize with user data or empty string
         accountName: user?.accountName || '', // Initialize with user data or empty string
@@ -19,7 +21,7 @@ const Settings = () => {
         accountNumber: user?.accountNumber || '', // Initialize with user data or empty string
     });
 
-    const handleChange = (e) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({
             ...prevData,
@@ -27,26 +29,26 @@ const Settings = () => {
         }));
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         // Remove properties with undefined values from formData
-        const FormData = Object.fromEntries(
-            Object.entries(formData).filter(([key, value]) => value !== undefined)
+        const formDataNonNullValues = Object.fromEntries(
+            Object.entries(formData).filter(([_key, value]) => value !== undefined) // _ to indicate that 'key' is intentionally unused
         );
 
         // Update user data in the Firebase Realtime Database
         const db = getDatabase();
-        const userRef = ref(db, `users/${user.uid}`);
+        const userRef = ref(db, `users/${user?.uid}`);
 
         try {
             // Update only the fields you need to change in the user object
             const updatedUserData = {
-                ...user, // Include the existing user data
-                bankName: FormData.bankName || user.bankName || '', // Use existing value if not provided in formData
-                accountName: FormData.accountName || user.accountName || '', // Use existing value if not provided in formData
-                phoneNumber: FormData.phoneNumber || user.phoneNumber || '', // Use existing value if not provided in formData
-                accountNumber: FormData.accountNumber || user.accountNumber || '', // Use existing value if not provided in formData
+                ...(user || {}),
+                bankName: formDataNonNullValues.bankName || user?.bankName || '', // Use existing value if not provided
+                accountName: formDataNonNullValues.accountName || user?.accountName || '', // Use existing value if not provided
+                phoneNumber: formDataNonNullValues.phoneNumber || user?.phoneNumber || '', // Use existing value if not provided
+                accountNumber: formDataNonNullValues.accountNumber || user?.accountNumber || '', // Use existing value if not provided
             };
 
             await set(userRef, updatedUserData);
@@ -64,7 +66,7 @@ const Settings = () => {
             }, 3500);
         } catch (error) {
             console.error('Error updating user data:', error);
-            Alerts.error("Error updating user data. Please try again.");
+            setErrorMessage("Error updating user data. Please try again.");
         }
     };
 
@@ -224,7 +226,16 @@ const Settings = () => {
                     {/* Display success message if available */}
                     {successMessage && (
                         <div className="text-green-500 text-center mt-4">
-                            {successMessage}
+                            {/* {successMessage} */}
+                            <Alerts success={successMessage} error={null} />
+                        </div>
+                    )}
+
+                    {/* Display error message if available */}
+                    {errorMessage && (
+                        <div className="text-red-500 text-center mt-4">
+                            {/* {errorMessage} */}
+                            <Alerts error={errorMessage} success={null} />
                         </div>
                     )}
 

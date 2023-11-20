@@ -3,7 +3,7 @@ import { useAppContext } from '../../Context/AppContext';
 
 
 const Profile = () => {
-    const { user, setUser } = useAppContext(); // Use the user state from the context
+    const { user } = useAppContext(); // Use the user state from the context
 
     return (
         <div className="container pt-20 pb-0">

@@ -13,7 +13,7 @@ const HeaderGraph = () => {
         Monthly: { graph: MonthlyGraph, balance: "₦5,678,901", day: "This month so far", },
     };
 
-    const handleIntervalChange = (interval) => {
+    const handleIntervalChange = (interval: keyof typeof intervalToDataMap) => {
         setSelectedInterval(interval);
     };
 
@@ -25,13 +25,13 @@ const HeaderGraph = () => {
                         <span>
                             {/* so far */}
                             <p className="text-[0.75rem] text-[#2E2E3A] leading-normal font-bold">
-                                {intervalToDataMap[selectedInterval].day}
+                                {intervalToDataMap[selectedInterval as keyof typeof intervalToDataMap].day}
                             </p>
                             {/* end of 'so far' */}
 
                             {/* Display the selected balance based on the state */}
                             <h1 className="text-[1.25rem] text-[#2E2E3A] leading-normal font-black">
-                                {intervalToDataMap[selectedInterval].balance}
+                                {intervalToDataMap[selectedInterval as keyof typeof intervalToDataMap].balance}
                             </h1>
                             {/* Display the selected balance based on the state */}
                         </span>
@@ -89,7 +89,7 @@ const HeaderGraph = () => {
                         {/* Display the selected graph based on the state */}
                         <span className="flex items-end">
                             <img
-                                src={intervalToDataMap[selectedInterval].graph}
+                                src={intervalToDataMap[selectedInterval as keyof typeof intervalToDataMap].graph}
                                 className=""
                                 alt="graph"
                             />

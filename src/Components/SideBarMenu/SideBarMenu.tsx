@@ -23,7 +23,7 @@ import { GrTransaction } from "react-icons/gr";
 
 
 
-export function SidebarWithSearch({ showSidebar }) {
+export function SidebarWithSearch({ showSidebar }: { showSidebar: boolean }) {
     const navigate = useNavigate();
     // logout
     const handleLogout = () => {
@@ -33,6 +33,7 @@ export function SidebarWithSearch({ showSidebar }) {
             console.log("Signed out successfully")
         }).catch((error) => {
             // An error happened.
+            console.log(error)
         });
     }
     // end of logout
@@ -40,7 +41,7 @@ export function SidebarWithSearch({ showSidebar }) {
     const [open, setOpen] = React.useState(0);
     const [openAlert, setOpenAlert] = React.useState(true);
 
-    const handleOpen = (value) => {
+    const handleOpen = (value: number) => {
         setOpen(open === value ? 0 : value);
     };
 

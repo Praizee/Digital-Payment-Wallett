@@ -17,9 +17,14 @@ type UserState = {
 };
 
 // Create a context for the app's state
-const AppContext = createContext<{ user: UserState | null; loading: boolean }>({
+const AppContext = createContext<{
+    user: UserState | null;
+    loading: boolean;
+    setUser: React.Dispatch<React.SetStateAction<UserState | null>>;
+}>({
     user: null,
     loading: true,
+    setUser: () => { } // Provide a dummy function to satisfy TypeScript
 });
 
 // Create a custom hook for accessing the app's context
@@ -55,8 +60,8 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
                             ...(prevState || {}),
                             uid,
                             email: email || '', // Assert that email is non-null
-                            firstName: first_name || '', // Assert that first_name is non-null
-                            lastName: last_name || '',   // Assert that last_name is non-null
+                            firstName: first_name || '', // Map to 'firstName' in your state // Assert that first_name is non-null
+                            lastName: last_name || '',  // Map to 'lastName' in your state // Assert that last_name is non-null
                             bankName: bankName || '',
                             accountName: accountName || '',
                             accountNumber: accountNumber || '',
@@ -81,8 +86,8 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
         return () => unsubscribe();
     }, []);
 
-    // Provide the user and loading state as a value to the context
-    const contextValue = { user, loading };
+    // Provide the user, loading, and setUser state as a value to the context
+    const contextValue = { user, loading, setUser };
 
     return <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>;
 };

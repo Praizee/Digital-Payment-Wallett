@@ -9,7 +9,7 @@ const CreditCard = () => {
     return (
         <section>
             <div className="">
-                <div className="card w-[500px] h-[300px] text-white cursor-pointer ">
+                <div className="card min-w-[500px] max-w-full h-[300px] text-white cursor-pointer ">
 
                     <div className="card-inner w-full h-full relative">
                         {/* card front */}

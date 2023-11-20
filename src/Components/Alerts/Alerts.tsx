@@ -1,27 +1,23 @@
 import React, { useState, useEffect, ReactElement } from "react";
 
 interface AlertsProps {
-    errorMessages: string[];
-    successMessages: string[];
+    error: string | null;
+    success: string | null;
 }
 
-const Alerts: React.FC<AlertsProps> = ({ errorMessages, successMessages }) => {
-    const [alerts, setAlerts] = useState<ReactElement[]>([]);
+const Alerts: React.FC<AlertsProps> = ({ error, success }) => {
+    const [alerts, setAlerts] = useState<ReactElement[] | null>(null);
 
     useEffect(() => {
-        // Ensure that both errorMessages and successMessages are arrays
-        const errorMessagesArray = Array.isArray(errorMessages) ? errorMessages : [];
-        const successMessagesArray = Array.isArray(successMessages) ? successMessages : [];
-
         // Combine error and success messages into a single array
-        const combinedMessages = [...errorMessagesArray, ...successMessagesArray];
+        const combinedMessages = [error, success].filter((message) => message !== null) as string[];
 
         if (combinedMessages.length > 0) {
             // Create alert components based on both error and success messages
             const newAlerts = combinedMessages.map((message, index) => (
                 <div
                     key={index}
-                    className={`${errorMessagesArray.includes(message) ? "bg-red-500" : "bg-green-500"
+                    className={`${error ? "bg-red-500" : "bg-green-500"
                         } text-white p-2 rounded mb-2`}
                 >
                     {message}
@@ -32,10 +28,10 @@ const Alerts: React.FC<AlertsProps> = ({ errorMessages, successMessages }) => {
 
             // Automatically clear the alerts after 3.5 seconds (3500 milliseconds)
             setTimeout(() => {
-                setAlerts([]);
+                setAlerts(null);
             }, 3500);
         }
-    }, [errorMessages, successMessages]);
+    }, [error, success]);
 
     return (
         <div className="fixed top-0 right-0 p-4 transition ease-linear animate-bounce duration-500">
