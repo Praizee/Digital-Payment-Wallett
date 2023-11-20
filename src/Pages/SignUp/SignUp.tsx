@@ -1,9 +1,9 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword, updateProfile, sendEmailVerification } from 'firebase/auth';
-import { auth, db } from '../../Firebase/firebase.js';
+import { auth, db } from '../../Firebase/firebase';
 import { getDatabase, ref, set } from 'firebase/database';
-import { useAppContext } from "../../Context/AppContext.js";
+import { useAppContext } from "../../Context/AppContext";
 
 import { motion } from "framer-motion";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
