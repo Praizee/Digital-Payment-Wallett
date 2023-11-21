@@ -9,8 +9,8 @@ import Statistics from "../../Components/Main/Statistics";
 import { CustomerTable } from "../../Components/Main/CustomerTable";
 
 import { useAppContext } from '../../Context/AppContext'; // Updated import to useAppContext
-import GreetingMessage from '../../Components/Greeting/GreetingMessage.jsx';
-import CreditCard from '../../Components/CreditCard/CreditCard.jsx';
+import GreetingMessage from '../../Components/Greeting/GreetingMessage';
+import CreditCard from '../../Components/CreditCard/CreditCard';
 
 // Define animation configuration
 const animationConfiguration = {
