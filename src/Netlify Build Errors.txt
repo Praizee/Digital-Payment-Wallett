@@ -1,57 +1,24 @@
-3:57:22 PM: src/Pages/Login/Login.tsx(27,20): error TS7006: Parameter "e" implicitly has an "any" type.
-
-3:57:22 PM: src/Pages/Login/Login.tsx(33,25): error TS2322: Type "string" is not assignable to type "never".
-
-3:57:22 PM: src/Pages/Login/Login.tsx(61,27): error TS2322: Type "string" is not assignable to type "never".
-
-3:57:22 PM: src/Pages/Login/Login.tsx(254,27): error TS2322: Type "{ errorMessages: never[]; }" is not assignable to type "IntrinsicAttributes & AlertsProps".
-
-3:57:22 PM:   Property "errorMessages" does not exist on type "IntrinsicAttributes & AlertsProps".
-
-3:57:22 PM: src/Pages/SignUp/SignUp.tsx(1,8): error TS6133: "React" is declared but its value is never read.
-
-3:57:22 PM: src/Pages/SignUp/SignUp.tsx(4,16): error TS6133: "db" is declared but its value is never read.
-
-3:57:22 PM: src/Pages/SignUp/SignUp.tsx(27,25): error TS7006: Parameter "e" implicitly has an "any" type.
-
-3:57:22 PM: src/Pages/SignUp/SignUp.tsx(29,13): error TS2345: Argument of type "(prevUser: UserState | null) => { uid?: string | undefined; email?: string | undefined; firstName?: string | undefined; lastName?: string | undefined; bankName?: string | undefined; accountName?: string | undefined; accountNumber?: string | undefined; phoneNumber?: string | undefined; }" is not assignable to parameter of type "SetStateAction<UserState | null>".
-
-3:57:22 PM:   Type "(prevUser: UserState | null) => { uid?: string | undefined; email?: string | undefined; firstName?: string | undefined; lastName?: string | undefined; bankName?: string | undefined; accountName?: string | undefined; accountNumber?: string | undefined; phoneNumber?: string | undefined; }" is not assignable to type "(prevState: UserState | null) => UserState | null".
-
-3:57:22 PM:     Call signature return types "{ uid?: string | undefined; email?: string | undefined; firstName?: string | undefined; lastName?: string | undefined; bankName?: string | undefined; accountName?: string | undefined; accountNumber?: string | undefined; phoneNumber?: string | undefined; }" and "UserState | null" are incompatible.
-
-3:57:22 PM:       The types of "uid" are incompatible between these types.
-
-3:57:22 PM:         Type "string | undefined" is not assignable to type "string".
-
-3:57:22 PM:           Type "undefined" is not assignable to type "string".
-
-3:57:22 PM: src/Pages/SignUp/SignUp.tsx(35,9): error TS6133: "initialUserState" is declared but its value is never read.
-
-3:57:22 PM: src/Pages/SignUp/SignUp.tsx(42,27): error TS7006: Parameter "e" implicitly has an "any" type.
-
-3:57:22 PM: src/Pages/SignUp/SignUp.tsx(48,13): error TS2339: Property "email" does not exist on type "UserState | null".
-
-3:57:22 PM: src/Pages/SignUp/SignUp.tsx(48,20): error TS2339: Property "password" does not exist on type "UserState | null".
-
-3:57:22 PM: src/Pages/SignUp/SignUp.tsx(48,30): error TS2339: Property "firstName" does not exist on type "UserState | null".
-
-3:57:22 PM: src/Pages/SignUp/SignUp.tsx(48,41): error TS2339: Property "lastName" does not exist on type "UserState | null".
-
-3:57:22 PM: src/Pages/SignUp/SignUp.tsx(52,25): error TS2322: Type "string" is not assignable to type "never".
-
-3:57:22 PM: src/Pages/SignUp/SignUp.tsx(59,25): error TS2322: Type "string" is not assignable to type "never".
-
-3:57:22 PM: src/Pages/SignUp/SignUp.tsx(67,9): error TS2322: Type "string" is not assignable to type "never".
-
-3:57:22 PM: src/Pages/SignUp/SignUp.tsx(95,27): error TS2322: Type "string" is not assignable to type "never".
-
-3:57:22 PM: src/Pages/SignUp/SignUp.tsx(104,25): error TS18046: "error" is of type "unknown".
-
-3:57:22 PM: src/Pages/SignUp/SignUp.tsx(104,25): error TS2322: Type "any" is not assignable to type "never".
-
-3:57:22 PM: src/Pages/SignUp/SignUp.tsx(265,38): error TS2339: Property "password" does not exist on type "UserState".
-
-3:57:22 PM: src/Pages/SignUp/SignUp.tsx(344,27): error TS2322: Type "{ errorMessages: never[]; successMessages: never[]; }" is not assignable to type "IntrinsicAttributes & AlertsProps".
-
-3:57:22 PM:   Property "errorMessages" does not exist on type "IntrinsicAttributes & AlertsProps".
+3:02:15 PM: src/Pages/SignUp/SignUp.tsx(1,8): error TS6133: "React" is declared but its value is never read.
+3:02:15 PM: src/Pages/SignUp/SignUp.tsx(4,16): error TS6133: "db" is declared but its value is never read.
+3:02:15 PM: src/Pages/SignUp/SignUp.tsx(27,25): error TS7006: Parameter "e" implicitly has an "any" type.
+3:02:15 PM: src/Pages/SignUp/SignUp.tsx(29,13): error TS2345: Argument of type "(prevUser: UserState | null) => { uid?: string | undefined; email?: string | undefined; firstName?: string | undefined; lastName?: string | undefined; bankName?: string | undefined; accountName?: string | undefined; accountNumber?: string | undefined; phoneNumber?: string | undefined; }" is not assignable to parameter of type "SetStateAction<UserState | null>".
+3:02:15 PM:   Type "(prevUser: UserState | null) => { uid?: string | undefined; email?: string | undefined; firstName?: string | undefined; lastName?: string | undefined; bankName?: string | undefined; accountName?: string | undefined; accountNumber?: string | undefined; phoneNumber?: string | undefined; }" is not assignable to type "(prevState: UserState | null) => UserState | null".
+3:02:15 PM:     Call signature return types "{ uid?: string | undefined; email?: string | undefined; firstName?: string | undefined; lastName?: string | undefined; bankName?: string | undefined; accountName?: string | undefined; accountNumber?: string | undefined; phoneNumber?: string | undefined; }" and "UserState | null" are incompatible.
+3:02:15 PM:       The types of "uid" are incompatible between these types.
+3:02:15 PM:         Type "string | undefined" is not assignable to type "string".
+3:02:15 PM:           Type "undefined" is not assignable to type "string".
+3:02:15 PM: src/Pages/SignUp/SignUp.tsx(35,9): error TS6133: "initialUserState" is declared but its value is never read.
+3:02:15 PM: src/Pages/SignUp/SignUp.tsx(42,27): error TS7006: Parameter "e" implicitly has an "any" type.
+3:02:15 PM: src/Pages/SignUp/SignUp.tsx(48,13): error TS2339: Property "email" does not exist on type "UserState | null".
+3:02:15 PM: src/Pages/SignUp/SignUp.tsx(48,20): error TS2339: Property "password" does not exist on type "UserState | null".
+3:02:15 PM: src/Pages/SignUp/SignUp.tsx(48,30): error TS2339: Property "firstName" does not exist on type "UserState | null".
+3:02:15 PM: src/Pages/SignUp/SignUp.tsx(48,41): error TS2339: Property "lastName" does not exist on type "UserState | null".
+3:02:15 PM: src/Pages/SignUp/SignUp.tsx(52,25): error TS2322: Type "string" is not assignable to type "never".
+3:02:15 PM: src/Pages/SignUp/SignUp.tsx(59,25): error TS2322: Type "string" is not assignable to type "never".
+3:02:15 PM: src/Pages/SignUp/SignUp.tsx(67,9): error TS2322: Type "string" is not assignable to type "never".
+3:02:15 PM: src/Pages/SignUp/SignUp.tsx(95,27): error TS2322: Type "string" is not assignable to type "never".
+3:02:15 PM: src/Pages/SignUp/SignUp.tsx(104,25): error TS18046: "error" is of type "unknown".
+3:02:15 PM: src/Pages/SignUp/SignUp.tsx(104,25): error TS2322: Type "any" is not assignable to type "never".
+3:02:15 PM: src/Pages/SignUp/SignUp.tsx(265,38): error TS2339: Property "password" does not exist on type "UserState".
+3:02:15 PM: src/Pages/SignUp/SignUp.tsx(344,27): error TS2322: Type "{ errorMessages: never[]; successMessages: never[]; }" is not assignable to type "IntrinsicAttributes & AlertsProps".
+3:02:15 PM:   Property "errorMessages" does not exist on type "IntrinsicAttributes & AlertsProps".
