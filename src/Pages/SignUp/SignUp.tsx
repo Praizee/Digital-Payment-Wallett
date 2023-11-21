@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword, updateProfile, sendEmailVerification } from 'firebase/auth';
-import { auth, db } from '../../Firebase/firebase';
+import { auth } from '../../Firebase/firebase';
 import { getDatabase, ref, set } from 'firebase/database';
-import { useAppContext } from "../../Context/AppContext";
+import { useAppContext, UserState } from "../../Context/AppContext";
 
 import { motion } from "framer-motion";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
@@ -21,16 +21,17 @@ const SignUp = () => {
   const { user, setUser } = useAppContext(); // Use the user state from the context
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false); // Add loading state
-  const [errorMessages, setErrorMessages] = useState([]);
-  const [successMessages, setSuccessMessages] = useState([]); // Define successMessages state
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<string | null>(null);
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value, name } = e.target;
-    setUser((prevUser) => ({
-      ...prevUser,
+    setUser((prevUser: UserState | null) => ({
+      ...(prevUser as UserState), // Type assertion to UserState
       [name]: value,
     }));
   };
+
 
   const initialUserState = {
     firstName: "",
@@ -39,33 +40,34 @@ const SignUp = () => {
     password: "",
   };
 
-  const onSubmit = async (e) => {
+  const onSignup = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setErrorMessages([]);
-    setSuccessMessages([]); // Clear any existing success messages
+    setError(null);
+    setSuccess(null);
 
     // Extract user input
-    const { email, password, firstName, lastName } = user;
+    const { email, password, firstName, lastName } = user || {};
+
 
     // Check if any field is empty
     if (!email || !password || !firstName || !lastName) {
-      setErrorMessages(["Please fill in all fields."]);
+      setError("Please fill in all fields.");
       return;
     }
 
     // Check if the email is valid
     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
     if (!emailRegex.test(email)) {
-      setErrorMessages(["Invalid email. Email should contain an '@'."]);
+      setError("Invalid email. Email should contain an '@'.");
       return;
     }
 
     // Check if the password meets your criteria
     const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
     if (!passwordRegex.test(password)) {
-      setErrorMessages([
+      setError(
         "Password should be at least 6 characters and contain at least one uppercase letter, one lowercase letter, and one number.",
-      ]);
+      );
       return;
     }
 
@@ -92,16 +94,16 @@ const SignUp = () => {
 
       // Add the success message here
       console.log("Account created successfully! Please check your email to verify your account.");
-      setSuccessMessages(["Account created successfully! Please check your email to verify your account."]);
+      setSuccess("Account created successfully! Please check your email to verify your account.");
 
       // Automatically clear the success message and navigate after 5 seconds
       setTimeout(() => {
-        setSuccessMessages([]);
+        setSuccess(null);
         navigate("/");
       }, 5000);
     } catch (error) {
       console.error("Error creating user:", error);
-      setErrorMessages([error.message]);
+      setError((error as Error).message);
     } finally {
       setLoading(false);
     }
@@ -194,7 +196,7 @@ const SignUp = () => {
                 </div>
 
                 {/* border-2 border-dotted border-[#0071F2] px-8 py-2 */}
-                <form
+                <form onSubmit={onSignup}
                   className=" mt-8 md:mt-0 rounded-lg grid grid-cols-6 gap-6 border-2 border-dotted border-[#0071F2] p-10 md:p-5">
 
                   <div className="col-span-6 sm:col-span-3">
@@ -309,7 +311,6 @@ const SignUp = () => {
                   <div className="col-span-6">
                     <button
                       type="submit"
-                      onClick={onSubmit}
                       className="inline-block w-full shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
                     >
                       {loading ? (
@@ -341,7 +342,7 @@ const SignUp = () => {
                     </p>
                   </div>
                   {/* Display the Alerts component with error and success messages */}
-                  <Alerts errorMessages={errorMessages} successMessages={successMessages} />
+                  <Alerts error={error} success={success} />
                   {/* Pass successMessages to Alerts component */}
                 </form>
               </div>
