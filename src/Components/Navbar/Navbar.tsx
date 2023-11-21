@@ -1,6 +1,5 @@
 import { FiMenu } from "react-icons/fi";
 import { LuBell, LuScanLine, LuSun, LuMoon } from "react-icons/lu";
-import { IoChatboxEllipsesOutline } from "react-icons/io5";
 import UserPic from "../../assets/Userpic.png";
 import { useAppContext } from "../../Context/AppContext";
 import { GoVerified } from "react-icons/go";
@@ -29,10 +28,6 @@ const Navbar = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
           <button className="btn btn-ghost btn-circle hidden tablet:inline-flex" title="Scan QR Code">
             <LuScanLine size={23} /> {/* Scan QR Code icon */}
           </button>
-          <a href="mailto:name@email.com"
-            className="btn btn-ghost btn-circle hidden tablet:inline-flex" title="Get Help">
-            <IoChatboxEllipsesOutline size={23} /> {/* Get Help icon */}
-          </a>
           <button className="btn btn-ghost btn-circle" title="Notifications">
             <div className="indicator">
               <LuBell size={23} /> {/* Bell icon */}
