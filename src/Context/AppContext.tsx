@@ -4,9 +4,10 @@ import { getDatabase, ref, get, DataSnapshot } from 'firebase/database';
 import { auth } from '../Firebase/firebase';
 
 // Define the initial state structure
-type UserState = {
+export type UserState = {
     uid: string;
     email: string;
+    password: string;
     firstName: string;
     lastName: string;
     bankName: string;
@@ -60,6 +61,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
                             ...(prevState || {}),
                             uid,
                             email: email || '', // Assert that email is non-null
+                            password: '', // Initialize the password field
                             firstName: first_name || '', // Map to 'firstName' in your state // Assert that first_name is non-null
                             lastName: last_name || '',  // Map to 'lastName' in your state // Assert that last_name is non-null
                             bankName: bankName || '',
