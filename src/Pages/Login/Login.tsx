@@ -24,7 +24,7 @@ const Login = () => {
 
 
 
-  const onLogin = (e) => {
+  const onLogin = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setErrorMessages([]); // Clear any previous error messages
     setLoading(true); // Start loading
@@ -35,7 +35,8 @@ const Login = () => {
       return;
     }
 
-    let errorMessage = ''; // Use let instead of const
+    let errorMessage: string | null = null; // Use null instead of an empty string
+
 
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
