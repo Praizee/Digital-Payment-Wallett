@@ -203,7 +203,7 @@ const Login = () => {
                       </span>
                     </label>
                     <Link to="/reset-password"
-                      className="mt-0 text-sm text-[#0071F2] font-semibold link link-hover">
+                      className="mt-0 text-sm text-right text-[#0071F2] font-semibold link link-hover">
                       Forgot password?
                     </Link>
 
