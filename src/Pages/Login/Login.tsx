@@ -19,28 +19,24 @@ const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [loading, setLoading] = useState(false); // Add loading state
-  const [errorMessages, setErrorMessages] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-
-
-  const onLogin = (e: React.FormEvent<HTMLFormElement>) => {
+  const onLogin = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    setErrorMessages([]); // Clear any previous error messages
-    setLoading(true); // Start loading
+    setError(null);
+    setLoading(true);
 
     if (!email || !password) {
-      setErrorMessages(['Email and password are required.']);
+      setError('Email and password are required.');
       setLoading(false);
       return;
     }
 
-    let errorMessage: string | null = null; // Use null instead of an empty string
-
+    let errorMessage: string | null = null;
 
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        // Signed in
         const user = userCredential.user;
         navigate("/dashboard");
         console.log(user);
@@ -48,9 +44,8 @@ const Login = () => {
       })
       .catch((error) => {
         const errorCode = error.code;
-        errorMessage = error.message; // Reassign errorMessage with let
+        errorMessage = error.message;
 
-        // delete this to continue using FirebaseError
         if (errorCode === "auth/invalid-login-credentials") {
           errorMessage = "Invalid login credentials. Check your email and password and try again.";
         }
@@ -58,13 +53,10 @@ const Login = () => {
         console.log(errorCode, errorMessage);
       })
       .finally(() => {
-        // Set the error message to display to the user
-        setErrorMessages([errorMessage]);
-        setLoading(false); // Stop loading after success or failure
+        setError(errorMessage);
+        setLoading(false);
       });
   };
-
-
 
   const [showPassword, setShowPassword] = useState(false);
 
@@ -156,7 +148,8 @@ const Login = () => {
                   </p>
                 </div>
 
-                <form className=" mt-8 rounded-lg grid grid-cols-6 gap-6 border-2 border-dotted border-[#0071F2] p-6 md:p-10">
+                <form onSubmit={onLogin}
+                  className=" mt-8 rounded-lg grid grid-cols-6 gap-6 border-2 border-dotted border-[#0071F2] p-6 md:p-10">
 
                   <div className="col-span-6 ">
                     <label htmlFor="Email" className="block text-sm font-medium text-gray-700">
@@ -218,7 +211,7 @@ const Login = () => {
 
                   <div className="col-span-6 sm:gap-4">
                     <button
-                      onClick={onLogin}
+                      type="submit"
                       className="inline-block shrink-0 w-full rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
                       disabled={loading} // Disable the button while loading
                     >
@@ -233,6 +226,7 @@ const Login = () => {
                         'Log in'
                       )}
                     </button>
+
                   </div>
 
                   <div className="col-span-6 sm:gap-4">
@@ -252,7 +246,8 @@ const Login = () => {
                     </p>
                   </div>
                   {/* error alert message */}
-                  <Alerts errorMessages={errorMessages} />
+                  <Alerts error={error} success={null} />
+                  {/* <Alerts errorMessages={errorMessages} /> */}
                 </form>
               </div>
             </main>
