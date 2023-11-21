@@ -33,12 +33,12 @@ const SignUp = () => {
   };
 
 
-  const initialUserState = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-  };
+  // const initialUserState = {
+  //   firstName: "",
+  //   lastName: "",
+  //   email: "",
+  //   password: "",
+  // };
 
   const onSignup = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
