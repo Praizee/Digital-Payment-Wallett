@@ -1,3 +1,5 @@
+All done!!! ✅✅
+
 3:02:15 PM: src/Pages/SignUp/SignUp.tsx(1,8): error TS6133: "React" is declared but its value is never read.
 3:02:15 PM: src/Pages/SignUp/SignUp.tsx(4,16): error TS6133: "db" is declared but its value is never read.
 3:02:15 PM: src/Pages/SignUp/SignUp.tsx(27,25): error TS7006: Parameter "e" implicitly has an "any" type.
