@@ -190,11 +190,11 @@ const Login = () => {
                   {/* end of password */}
 
                   <div className="col-span-6 flex justify-between">
-                    <label htmlFor="MarketingAccept" className="flex gap-2">
+                    <label htmlFor="rememberMe" className="flex gap-2">
                       <input
                         type="checkbox"
-                        id="MarketingAccept"
-                        name="marketing_accept"
+                        id="rememberMe"
+                        name="rememberMe"
                         className=" rounded-md border-gray-200 bg-white shadow-sm"
                       />
 
