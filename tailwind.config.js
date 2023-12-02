@@ -43,6 +43,7 @@ module.exports = withMT({
       black: '900',
     },
 
+    // Bouncing loader animation 
     animation: {
       loader: 'loader 0.6s infinite alternate',
     },

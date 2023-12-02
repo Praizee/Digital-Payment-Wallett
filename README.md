@@ -1,3 +1,3 @@
 # Digital Payment Wallet
 
-Digital Payment Wallet (Typesript)
+Digital Payment Wallet (Typescript)
