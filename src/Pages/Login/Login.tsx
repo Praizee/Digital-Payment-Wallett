@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../Firebase/firebase';
@@ -15,7 +15,7 @@ const animationConfiguration = {
   exit: { opacity: 0 },
 };
 
-const Login = () => {
+const Login: FC = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

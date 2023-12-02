@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
 import { useAppContext } from '../../Context/AppContext';
+import { FC } from 'react';
 
 
-const Profile = () => {
+const Profile: FC = () => {
     const { user } = useAppContext(); // Use the user state from the context
 
     return (
