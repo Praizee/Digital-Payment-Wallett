@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { sendPasswordResetEmail } from "firebase/auth";
@@ -11,7 +11,7 @@ const animationConfiguration = {
     exit: { opacity: 0 },
 };
 
-const ResetPassword = () => {
+const ResetPassword: FC = () => {
     const [email, setEmail] = useState("");
     const [isSent, setIsSent] = useState(false);
     const [loading, setLoading] = useState(false); // Add loading state

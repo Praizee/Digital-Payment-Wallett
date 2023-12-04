@@ -1,6 +1,7 @@
+import { FC } from 'react'
 
 
-const PinManagement = () => {
+const PinManagement: FC = () => {
     return (
         <div className="container pt-24 laptop:mr-[rem]">
             <div className='laptop:flex gap-20 space-y-20 laptop:space-y-0 tablet:place-content-center tablet:px-10'>
