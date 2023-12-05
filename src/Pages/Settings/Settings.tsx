@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 import { useAppContext } from '../../Context/AppContext';
 import { getDatabase, ref, set } from 'firebase/database';
@@ -7,7 +7,7 @@ import { Spinner } from "@material-tailwind/react";
 import Alerts from "../../Components/Alerts/Alerts";
 
 
-const Settings = () => {
+const Settings: FC = () => {
     const { user } = useAppContext();
     const navigate = useNavigate();
     const [loading] = useState(false);
