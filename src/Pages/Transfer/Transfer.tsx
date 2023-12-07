@@ -1,6 +1,7 @@
+import { FC } from "react"
 
 
-const Transfer = () => {
+const Transfer: FC = () => {
     return (
         <div className="container pt-20 pb-0">
 
