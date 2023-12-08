@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { FC, useState, useEffect } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import ScrollButton from '../Components/ScrollToTop/ScrollToTop';
 import Navbar from '../Components/Navbar/Navbar';
@@ -8,7 +8,7 @@ import { useAppContext } from '../Context/AppContext'; // Updated import to useA
 import Footer from '../Components/Footer/Footer';
 
 
-const AuthenticatedLayout = () => {
+const AuthenticatedLayout: FC = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const navigate = useNavigate();
   const { user, loading } = useAppContext(); // Updated to useAppContext  // Access user and loading from the context
