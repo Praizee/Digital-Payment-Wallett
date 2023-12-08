@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import { FaArrowCircleUp } from 'react-icons/fa';
 import { Button } from './ScrollButton.js';
 
-const ScrollButton = () => {
+const ScrollButton: FC = () => {
 
     const [visible, setVisible] = useState(false)
 
