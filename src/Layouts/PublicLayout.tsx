@@ -1,6 +1,8 @@
+import { FC } from "react"
 import { Outlet } from "react-router-dom";
 
-const PublicLayout = () => {
+
+const PublicLayout: FC = () => {
     return (
         <section>
 
