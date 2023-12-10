@@ -1,7 +1,8 @@
+import { FC } from "react"
 import { Link } from "react-router-dom";
 import "./styles.css"
 
-const NotFoundPage = () => {
+const NotFoundPage: FC = () => {
     return (
         <div className='w-full'>
             <div className="grid h-screen px-4 bg-white place-content-center">
