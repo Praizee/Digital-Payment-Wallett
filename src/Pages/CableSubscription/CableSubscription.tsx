@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 
-const CableSubscription = () => {
+const CableSubscription: FC = () => {
     const [service, setService] = useState<string>(''); // State to store the selected service
     const [plans, setPlans] = useState<CablePlans>([]); // State to store the available plans based on the selected service
     // Initialize with an empty array
