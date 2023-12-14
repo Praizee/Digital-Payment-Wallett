@@ -1,5 +1,6 @@
+import { FC } from "react"
 
-const ChangePassword = () => {
+const ChangePassword: FC = () => {
     return (
         <div className="container pt-20 pb-0">
 
