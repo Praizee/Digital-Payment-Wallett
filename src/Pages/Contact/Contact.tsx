@@ -1,5 +1,6 @@
+import { FC } from 'react'
 
-const Contact = () => {
+const Contact: FC = () => {
 
   return (
     <section>
