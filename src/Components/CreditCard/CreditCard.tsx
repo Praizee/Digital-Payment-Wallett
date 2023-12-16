@@ -1,8 +1,9 @@
+import { FC } from "react"
 import './styles.css'
 import { BsBank } from "react-icons/bs";
 import { useAppContext } from '../../Context/AppContext'; // Updated import to useAppContext
 
-const CreditCard = () => {
+const CreditCard: FC = () => {
     const { user } = useAppContext(); // Use the user state from the context
     // console.log('User:', user); // log the user data
 
