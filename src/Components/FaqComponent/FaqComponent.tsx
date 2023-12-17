@@ -1,7 +1,7 @@
+import { FC } from "react"
 import Faq from 'react-faq-component';
 
-
-const FaqComponent = () => {
+const FaqComponent: FC = () => {
     const data = {
         // title: "FAQ (How it works)",
         rows: [
