@@ -1,5 +1,6 @@
+import { FC } from "react"
 
-const Footer = () => {
+const Footer: FC = () => {
     return (
         <section className=''>
             <div className='text-sm'>
