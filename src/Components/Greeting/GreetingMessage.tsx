@@ -1,5 +1,6 @@
+import { FC } from "react"
 
-const GreetingMessage = () => {
+const GreetingMessage: FC = () => {
     // Get the current date and time
     const currentDate = new Date();
     // Get the current hour
