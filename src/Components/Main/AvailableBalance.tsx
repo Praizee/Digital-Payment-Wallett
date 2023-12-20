@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import './styles.css';
 import CopyButton from "./CopyButton";
 import Balance from "./Balance";
 
-const AvailableBalance = () => {
+const AvailableBalance: FC = () => {
     const [selectedBank, setSelectedBank] = useState("UBA Bank PLC"); // Set the default bank here
 
     // Create an object to store bank-account number pairs
