@@ -1,9 +1,8 @@
-import { useState } from 'react'
+import { FC, useState } from 'react'
 import { FcPrint } from "react-icons/fc";
 import { CustomerTableData } from './content';
 
-
-export const CustomerTable = () => {
+export const CustomerTable: FC = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 5; // Number of items to display per page
 
