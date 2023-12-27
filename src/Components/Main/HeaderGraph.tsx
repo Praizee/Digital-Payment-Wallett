@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import DailyGraph from "../../assets/Graph.png";
 import WeeklyGraph from "../../assets/Graph-3.png";
 import MonthlyGraph from "../../assets/Graph-2.png";
 
-const HeaderGraph = () => {
+const HeaderGraph: FC = () => {
     const [selectedInterval, setSelectedInterval] = useState("Daily");
 
     // Define the mapping of interval names to graph images and balances
