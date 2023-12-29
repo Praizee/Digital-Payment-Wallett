@@ -1,4 +1,6 @@
-const Statistics = () => {
+import { FC } from "react"
+
+const Statistics: FC = () => {
 
     return (
         <section className="text-black">
